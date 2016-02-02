@@ -1,9 +1,10 @@
 require 'sinatra'
 
+set :public_folder, File.dirname("hello.txt")
 
 get '/'do
 
-"hello world"
+  File.read(File.join('public', 'hello.txt'))
 	
 end
 
